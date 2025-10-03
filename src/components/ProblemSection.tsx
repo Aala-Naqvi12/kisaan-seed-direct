@@ -2,9 +2,9 @@ import { AlertCircle } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
-    "Farmers lose up to 40% income due to middlemen",
-    "Fake seeds and pesticides reduce crop health",
-    "Unpredictable weather lowers yield and trust"
+    "درمیانی افراد کی وجہ سے کسان 40% تک آمدنی کھو دیتے ہیں",
+    "جعلی بیج اور کیڑے مار دوائیں فصل کی صحت کو کم کرتی ہیں",
+    "غیر متوقع موسم پیداوار اور اعتماد کو کم کرتا ہے"
   ];
 
   return (
@@ -12,7 +12,7 @@ const ProblemSection = () => {
       <div className="container px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
-            The Problem Farmers Face Every Day
+            وہ مسائل جن کا کسان ہر روز سامنا کرتے ہیں
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -31,7 +31,7 @@ const ProblemSection = () => {
           <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-8 rounded-2xl border border-primary/20">
             <p className="text-2xl font-semibold text-foreground flex items-center justify-center gap-2">
               <span className="text-primary">👉</span>
-              Kisaan Bazaar solves this by creating a direct, transparent, farmer-friendly marketplace.
+              کسان بازار براہ راست، شفاف، اور کسان دوست مارکیٹ بنا کر ان مسائل کو حل کرتا ہے۔
             </p>
           </div>
         </div>

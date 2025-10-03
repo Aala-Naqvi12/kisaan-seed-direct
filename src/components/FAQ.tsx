@@ -8,24 +8,24 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How are prices decided?",
-      answer: "Prices are based on real-time market data, ensuring fairness for both farmers and buyers."
+      question: "قیمتوں کا فیصلہ کیسے ہوتا ہے؟",
+      answer: "قیمتیں حقیقی وقت کے مارکیٹ ڈیٹا پر مبنی ہیں، جو کسانوں اور خریداروں دونوں کے لیے انصاف کو یقینی بناتی ہیں۔"
     },
     {
-      question: "Can I trust the seeds and pesticides?",
-      answer: "Yes, all inputs are verified and rated by other farmers. We only work with certified suppliers."
+      question: "کیا میں بیج اور کیڑے مار دوا پر بھروسہ کر سکتا ہوں؟",
+      answer: "جی ہاں، تمام سامان کی تصدیق کی گئی ہے اور دوسرے کسانوں نے درجہ بندی کی ہے۔ ہم صرف تصدیق شدہ فراہم کنندگان کے ساتھ کام کرتے ہیں۔"
     },
     {
-      question: "How does the crop plan adjust with weather?",
-      answer: "The plan updates weekly based on regional weather forecasts to optimize your farming decisions."
+      question: "فصل منصوبہ موسم کے ساتھ کیسے ایڈجسٹ ہوتا ہے؟",
+      answer: "منصوبہ علاقائی موسمی پیشن گوئیوں کی بنیاد پر ہر ہفتے اپ ڈیٹ ہوتا ہے تاکہ آپ کے کاشتکاری کے فیصلوں کو بہتر بنایا جا سکے۔"
     },
     {
-      question: "What if I don't get buyers?",
-      answer: "Our platform ensures wide buyer reach with ratings and trust badges. Most listings connect within 48 hours."
+      question: "اگر مجھے خریدار نہیں ملتے تو کیا ہوگا؟",
+      answer: "ہمارا پلیٹ فارم درجہ بندی اور اعتماد کے بیجز کے ساتھ وسیع خریدار رسائی کو یقینی بناتا ہے۔ زیادہ تر فہرستیں 48 گھنٹوں میں منسلک ہو جاتی ہیں۔"
     },
     {
-      question: "Is my data secure?",
-      answer: "Yes, all farmer and buyer data is encrypted and protected with industry-standard security measures."
+      question: "کیا میرا ڈیٹا محفوظ ہے؟",
+      answer: "جی ہاں، تمام کسان اور خریدار کا ڈیٹا خفیہ کیا گیا ہے اور صنعت کے معیاری حفاظتی اقدامات سے محفوظ ہے۔"
     }
   ];
 
@@ -34,10 +34,10 @@ const FAQ = () => {
       <div className="container px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
-            Frequently Asked Questions
+            اکثر پوچھے جانے والے سوالات
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-12">
-            Everything you need to know about Kisaan Bazaar
+            کسان بازار کے بارے میں وہ سب کچھ جو آپ کو جاننے کی ضرورت ہے
           </p>
 
           <Accordion type="single" collapsible className="w-full space-y-4">

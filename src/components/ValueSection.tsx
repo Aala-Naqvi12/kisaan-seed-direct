@@ -2,12 +2,12 @@ import { CheckCircle2 } from "lucide-react";
 
 const ValueSection = () => {
   const values = [
-    "Sell crops at fair market prices instantly",
-    "Access only verified seeds, fertilizers, and pesticides",
-    "Personalized crop nutrition plan with weather-based updates",
-    "Boost yields up to 20–30% higher than traditional averages",
-    "Build trust with farmer ratings & reviews",
-    "Save time with easy app navigation in Urdu & English"
+    "فصلوں کو فوری طور پر منصفانہ مارکیٹ قیمتوں پر فروخت کریں",
+    "صرف تصدیق شدہ بیج، کھاد اور کیڑے مار دوا تک رسائی",
+    "موسم پر مبنی اپ ڈیٹس کے ساتھ ذاتی فصل غذائیت منصوبہ",
+    "روایتی اوسط سے 20-30% زیادہ پیداوار میں اضافہ",
+    "کسان کی درجہ بندی اور جائزوں سے اعتماد قائم کریں",
+    "اردو اور انگریزی میں آسان ایپ نیویگیشن سے وقت بچائیں"
   ];
 
   return (
@@ -15,10 +15,10 @@ const ValueSection = () => {
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
-            Why Farmers Choose Kisaan Bazaar
+            کسان کسان بازار کیوں منتخب کرتے ہیں
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-12">
-            Everything you need to succeed in modern agriculture
+            جدید زراعت میں کامیابی کے لیے سب کچھ جو آپ کو چاہیے
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">

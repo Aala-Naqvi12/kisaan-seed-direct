@@ -8,10 +8,12 @@ import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <LanguageSelector />
       <Hero />
       <SocialProof />
       <ProblemSection />

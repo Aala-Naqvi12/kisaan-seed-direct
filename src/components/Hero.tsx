@@ -19,20 +19,20 @@ const Hero = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-            Fair Prices. Better Yields.{" "}
-            <span className="text-primary">Direct from Farmer to Buyer.</span>
+            منصفانہ قیمتیں۔ بہتر پیداوار۔{" "}
+            <span className="text-primary">کسان سے خریدار تک براہِ راست۔</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl">
-            Kisaan Bazaar helps farmers sell crops directly, access trusted inputs, 
-            and grow smarter with personalized crop plans.
+            کسان بازار کسانوں کو براہ راست فصلیں بیچنے، تصدیق شدہ بیج اور کھاد حاصل کرنے، 
+            اور ذاتی فصل منصوبہ کے ساتھ ہوشیاری سے کاشتکاری کرنے میں مدد کرتا ہے۔
           </p>
 
           <Button 
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-elevated hover:shadow-soft transition-all duration-300 hover:scale-105 text-lg px-8 py-6"
           >
-            Join Kisaan Bazaar Today
+            آج ہی کسان بازار میں شامل ہوں
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

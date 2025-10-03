@@ -9,9 +9,9 @@ const Testimonial = () => {
             <Quote className="h-12 w-12 text-primary mb-6" />
             
             <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-6 italic">
-              "Before Kisaan Bazaar, I sold wheat at 25% less than the market. With direct selling, 
-              I earn fair prices. The crop nutrition plan increased my yield by 28%. Now, I trust 
-              Kisaan Bazaar for all my farming needs."
+              "کسان بازار سے پہلے، میں گندم مارکیٹ سے 25% کم قیمت پر بیچتا تھا۔ براہ راست فروخت 
+              سے، میں منصفانہ قیمتیں کماتا ہوں۔ فصل غذائیت منصوبہ نے میری پیداوار میں 28% اضافہ کیا۔ 
+              اب، میں اپنی تمام کاشتکاری کی ضروریات کے لیے کسان بازار پر بھروسہ کرتا ہوں۔"
             </blockquote>
 
             <div className="flex items-center gap-4">
@@ -19,8 +19,8 @@ const Testimonial = () => {
                 AR
               </div>
               <div>
-                <p className="font-bold text-lg text-foreground">Ali Raza</p>
-                <p className="text-muted-foreground">Farmer from Multan</p>
+                <p className="font-bold text-lg text-foreground">علی رضا</p>
+                <p className="text-muted-foreground">ملتان سے کسان</p>
               </div>
             </div>
           </div>

@@ -4,45 +4,45 @@ import { Check, Sparkles } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Free Plan",
+      name: "مفت پلان",
       price: "0",
-      period: "Forever",
+      period: "ہمیشہ کے لیے",
       features: [
-        "List your crops",
-        "Buy verified inputs",
-        "Basic marketplace access",
-        "Community support"
+        "اپنی فصلوں کی فہرست بنائیں",
+        "تصدیق شدہ سامان خریدیں",
+        "بنیادی مارکیٹ تک رسائی",
+        "کمیونٹی سپورٹ"
       ],
-      cta: "Get Started",
+      cta: "شروع کریں",
       highlighted: false
     },
     {
-      name: "Pro Plan",
+      name: "پرو پلان",
       price: "999",
-      period: "per month",
+      period: "فی مہینہ",
       features: [
-        "Everything in Free",
-        "Crop nutrition plan",
-        "Weekly weather updates",
-        "Priority listings",
-        "Email support"
+        "مفت میں سب کچھ",
+        "فصل غذائیت منصوبہ",
+        "ہفتہ وار موسمی اپ ڈیٹس",
+        "ترجیحی فہرستیں",
+        "ای میل سپورٹ"
       ],
-      cta: "Start Pro Plan",
+      cta: "پرو پلان شروع کریں",
       highlighted: true,
-      badge: "Best Value"
+      badge: "بہترین قدر"
     },
     {
-      name: "Premium Plan",
+      name: "پریمیم پلان",
       price: "1,999",
-      period: "per month",
+      period: "فی مہینہ",
       features: [
-        "Everything in Pro",
-        "Full expert support",
-        "Annual savings",
-        "Premium placement",
-        "24/7 phone support"
+        "پرو میں سب کچھ",
+        "مکمل ماہر سپورٹ",
+        "سالانہ بچت",
+        "پریمیم پلیسمنٹ",
+        "24/7 فون سپورٹ"
       ],
-      cta: "Go Premium",
+      cta: "پریمیم حاصل کریں",
       highlighted: false
     }
   ];
@@ -52,10 +52,10 @@ const Pricing = () => {
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
-            Choose Your Plan
+            اپنا پلان منتخب کریں
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-16">
-            Start free, upgrade as you grow
+            مفت شروع کریں، جیسے جیسے آپ بڑھتے ہیں اپ گریڈ کریں
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">

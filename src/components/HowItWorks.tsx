@@ -4,18 +4,18 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: ShoppingCart,
-      title: "List or Buy",
-      description: "Farmers list their yield OR buy verified inputs"
+      title: "فہرست بنائیں یا خریدیں",
+      description: "کسان اپنی پیداوار کی فہرست بنائیں یا تصدیق شدہ سامان خریدیں"
     },
     {
       icon: Handshake,
-      title: "Connect Directly",
-      description: "Buyers and farmers deal without middlemen"
+      title: "براہ راست رابطہ",
+      description: "خریدار اور کسان درمیانی افراد کے بغیر لین دین کریں"
     },
     {
       icon: TrendingUp,
-      title: "Grow Smarter",
-      description: "Use personalized crop plan to increase yield"
+      title: "ہوشیاری سے اگائیں",
+      description: "پیداوار بڑھانے کے لیے ذاتی فصل منصوبہ استعمال کریں"
     }
   ];
 
@@ -24,10 +24,10 @@ const HowItWorks = () => {
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
-            How It Works
+            یہ کیسے کام کرتا ہے
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-16">
-            Three simple steps to transform your farming business
+            اپنے کاشتکاری کے کاروبار کو تبدیل کرنے کے تین آسان مراحل
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">

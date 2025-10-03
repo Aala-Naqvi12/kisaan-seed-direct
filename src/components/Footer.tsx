@@ -14,19 +14,19 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground">
             <a href="#privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
+              رازداری کی پالیسی
             </a>
             <a href="#terms" className="hover:text-primary transition-colors">
-              Terms & Conditions
+              شرائط و ضوابط
             </a>
             <a href="#contact" className="hover:text-primary transition-colors">
-              Contact Us
+              ہم سے رابطہ کریں
             </a>
           </div>
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            © 2024 Kisaan Bazaar. All rights reserved.
+            © 2024 کسان بازار۔ تمام حقوق محفوظ ہیں۔
           </p>
         </div>
       </div>
