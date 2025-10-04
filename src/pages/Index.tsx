@@ -2,6 +2,9 @@ import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import ProblemSection from "@/components/ProblemSection";
 import ValueSection from "@/components/ValueSection";
+import MarketplacePreview from "@/components/MarketplacePreview";
+import AgriStorePreview from "@/components/AgriStorePreview";
+import NutritionPlanPreview from "@/components/NutritionPlanPreview";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
@@ -18,6 +21,9 @@ const Index = () => {
       <SocialProof />
       <ProblemSection />
       <ValueSection />
+      <MarketplacePreview />
+      <AgriStorePreview />
+      <NutritionPlanPreview />
       <HowItWorks />
       <Testimonial />
       <FAQ />
