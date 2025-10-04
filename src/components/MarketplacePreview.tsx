@@ -2,6 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, MapPin, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import wheatImg from "@/assets/products/wheat.jpg";
+import tomatoesImg from "@/assets/products/tomatoes.jpg";
+import riceImg from "@/assets/products/rice.jpg";
+import onionsImg from "@/assets/products/onions.jpg";
 
 const MarketplacePreview = () => {
   const products = [
@@ -14,7 +18,7 @@ const MarketplacePreview = () => {
       unit: "فی من",
       rating: 4.8,
       reviews: 124,
-      image: "🌾",
+      image: wheatImg,
       trend: "+12%",
       verified: true
     },
@@ -27,7 +31,7 @@ const MarketplacePreview = () => {
       unit: "فی کلو",
       rating: 4.9,
       reviews: 89,
-      image: "🍅",
+      image: tomatoesImg,
       trend: "+8%",
       verified: true
     },
@@ -40,7 +44,7 @@ const MarketplacePreview = () => {
       unit: "فی من",
       rating: 4.7,
       reviews: 156,
-      image: "🌾",
+      image: riceImg,
       trend: "+15%",
       verified: true
     },
@@ -53,7 +57,7 @@ const MarketplacePreview = () => {
       unit: "فی کلو",
       rating: 4.6,
       reviews: 67,
-      image: "🧅",
+      image: onionsImg,
       trend: "+5%",
       verified: true
     }
@@ -81,8 +85,12 @@ const MarketplacePreview = () => {
             >
               <CardContent className="p-4">
                 {/* Product Image */}
-                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl h-48 flex items-center justify-center text-7xl mb-4 group-hover:scale-105 transition-transform">
-                  {product.image}
+                <div className="rounded-xl h-48 overflow-hidden mb-4 group-hover:scale-105 transition-transform">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Product Info */}

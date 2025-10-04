@@ -6,6 +6,7 @@ import MarketplacePreview from "@/components/MarketplacePreview";
 import AgriStorePreview from "@/components/AgriStorePreview";
 import NutritionPlanPreview from "@/components/NutritionPlanPreview";
 import HowItWorks from "@/components/HowItWorks";
+import VideoTestimonials from "@/components/VideoTestimonials";
 import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
@@ -25,6 +26,7 @@ const Index = () => {
       <AgriStorePreview />
       <NutritionPlanPreview />
       <HowItWorks />
+      <VideoTestimonials />
       <Testimonial />
       <FAQ />
       <Pricing />

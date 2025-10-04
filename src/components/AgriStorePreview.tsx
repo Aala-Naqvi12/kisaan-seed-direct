@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import seedsImg from "@/assets/products/seeds.jpg";
+import fertilizerImg from "@/assets/products/fertilizer.jpg";
+import pesticideImg from "@/assets/products/pesticide.jpg";
 
 const AgriStorePreview = () => {
   const products = [
@@ -14,7 +17,7 @@ const AgriStorePreview = () => {
       unit: "فی کلو",
       rating: 4.9,
       reviews: 234,
-      icon: "🌱",
+      image: seedsImg,
       verified: true,
       inStock: true
     },
@@ -27,7 +30,7 @@ const AgriStorePreview = () => {
       unit: "فی بوری",
       rating: 4.7,
       reviews: 189,
-      icon: "💚",
+      image: fertilizerImg,
       verified: true,
       inStock: true
     },
@@ -40,7 +43,7 @@ const AgriStorePreview = () => {
       unit: "فی لیٹر",
       rating: 4.8,
       reviews: 167,
-      icon: "🛡️",
+      image: pesticideImg,
       verified: true,
       inStock: true
     }
@@ -67,9 +70,13 @@ const AgriStorePreview = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
-                {/* Product Icon */}
-                <div className="bg-gradient-to-br from-secondary/20 to-accent/10 rounded-xl h-32 flex items-center justify-center text-6xl mb-4 group-hover:scale-105 transition-transform">
-                  {product.icon}
+                {/* Product Image */}
+                <div className="rounded-xl h-32 overflow-hidden mb-4 group-hover:scale-105 transition-transform">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Category Badge */}
