@@ -1,11 +1,22 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
-type Language = 'ur' | 'en';
+type Language = 'ur' | 'en' | 'pa' | 'sd' | 'ps' | 'bal' | 'shina';
 
 interface LanguageContextType {
   language: Language;
-  toggleLanguage: () => void;
-  t: (urdu: string, english: string) => string;
+  setLanguage: (lang: Language) => void;
+  t: (translations: { ur: string; en: string; pa: string; sd: string; ps: string; bal: string; shina: string }) => string;
+  getLanguageName: (lang: Language) => string;
+}
+
+const languageConfig = {
+  ur: { name: 'اردو', dir: 'rtl', font: 'font-urdu' },
+  en: { name: 'English', dir: 'ltr', font: '' },
+  pa: { name: 'ਪੰਜਾਬੀ', dir: 'ltr', font: 'font-punjabi' },
+  sd: { name: 'سنڌي', dir: 'rtl', font: 'font-sindhi' },
+  ps: { name: 'پښتو', dir: 'rtl', font: 'font-pashto' },
+  bal: { name: 'بلوچی', dir: 'rtl', font: 'font-balochi' },
+  shina: { name: 'شینا', dir: 'rtl', font: 'font-shina' },
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -15,27 +26,30 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const html = document.documentElement;
-    if (language === 'ur') {
-      html.setAttribute('lang', 'ur');
-      html.setAttribute('dir', 'rtl');
-      html.classList.add('font-urdu');
-    } else {
-      html.setAttribute('lang', 'en');
-      html.setAttribute('dir', 'ltr');
-      html.classList.remove('font-urdu');
-    }
+    const config = languageConfig[language];
+    
+    html.setAttribute('lang', language);
+    html.setAttribute('dir', config.dir);
+    
+    // Remove all language font classes
+    Object.values(languageConfig).forEach(({ font }) => {
+      if (font) html.classList.remove(font);
+    });
+    
+    // Add current language font class
+    if (config.font) html.classList.add(config.font);
   }, [language]);
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'ur' ? 'en' : 'ur');
+  const t = (translations: { ur: string; en: string; pa: string; sd: string; ps: string; bal: string; shina: string }) => {
+    return translations[language];
   };
 
-  const t = (urdu: string, english: string) => {
-    return language === 'ur' ? urdu : english;
+  const getLanguageName = (lang: Language) => {
+    return languageConfig[lang].name;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, getLanguageName }}>
       {children}
     </LanguageContext.Provider>
   );

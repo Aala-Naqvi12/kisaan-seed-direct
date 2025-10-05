@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Sprout, Languages } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
-  const { language, toggleLanguage, t } = useLanguage();
+  const { language, setLanguage, t, getLanguageName } = useLanguage();
+  
+  const languages = ['ur', 'en', 'pa', 'sd', 'ps', 'bal', 'shina'] as const;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,12 +26,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: t('ہوم', 'Home') },
-    { id: 'marketplace', label: t('مارکیٹ پلیس', 'Marketplace') },
-    { id: 'agristore', label: t('ایگری سٹور', 'Agri Store') },
-    { id: 'nutrition', label: t('غذائیت منصوبہ', 'Nutrition Plan') },
-    { id: 'how-it-works', label: t('کیسے کام کرتا ہے', 'How It Works') },
-    { id: 'pricing', label: t('قیمتیں', 'Pricing') },
+    { id: 'hero', label: t({ ur: 'ہوم', en: 'Home', pa: 'ਘਰ', sd: 'گهر', ps: 'کور', bal: 'گھر', shina: 'گھر' }) },
+    { id: 'marketplace', label: t({ ur: 'مارکیٹ پلیس', en: 'Marketplace', pa: 'ਬਾਜ਼ਾਰ', sd: 'بازار', ps: 'بازار', bal: 'بازار', shina: 'بازار' }) },
+    { id: 'agristore', label: t({ ur: 'ایگری سٹور', en: 'Agri Store', pa: 'ਖੇਤੀ ਸਟੋਰ', sd: 'زرعي اسٽور', ps: 'کرنیز پلورنځی', bal: 'زرعی سٹور', shina: 'زرعی سٹور' }) },
+    { id: 'nutrition', label: t({ ur: 'غذائیت منصوبہ', en: 'Nutrition Plan', pa: 'ਪੋਸ਼ਣ ਯੋਜਨਾ', sd: 'غذائيت منصوبو', ps: 'تغذیه پلان', bal: 'غذائیت منصوبہ', shina: 'غذائیت منصوبہ' }) },
+    { id: 'how-it-works', label: t({ ur: 'کیسے کام کرتا ہے', en: 'How It Works', pa: 'ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ', sd: 'ڪيئن ڪم ڪري ٿو', ps: 'څنګه کار کوي', bal: 'کتیں کار کنت', shina: 'کیا کم کریلو' }) },
+    { id: 'pricing', label: t({ ur: 'قیمتیں', en: 'Pricing', pa: 'ਕੀਮਤਾਂ', sd: 'قيمتون', ps: 'بیې', bal: 'قیمتاں', shina: 'قیمتیں' }) },
   ];
 
   return (
@@ -53,16 +61,30 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Toggle */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleLanguage}
-            className="flex items-center gap-2"
-          >
-            <Languages className="h-4 w-4" />
-            <span>{language === 'ur' ? 'English' : 'اردو'}</span>
-          </Button>
+          {/* Language Selector */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-2 min-w-[120px]"
+              >
+                <Languages className="h-4 w-4" />
+                <span>{getLanguageName(language)}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-[160px]">
+              {languages.map((lang) => (
+                <DropdownMenuItem
+                  key={lang}
+                  onClick={() => setLanguage(lang)}
+                  className={language === lang ? 'bg-primary/10' : ''}
+                >
+                  {getLanguageName(lang)}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
