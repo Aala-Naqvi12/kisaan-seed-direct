@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import ProblemSection from "@/components/ProblemSection";
@@ -12,24 +13,23 @@ import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import LanguageSelector from "@/components/LanguageSelector";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <LanguageSelector />
-      <Hero />
+    <main className="min-h-screen pt-16">
+      <Header />
+      <div id="hero"><Hero /></div>
       <SocialProof />
       <ProblemSection />
       <ValueSection />
-      <MarketplacePreview />
-      <AgriStorePreview />
-      <NutritionPlanPreview />
-      <HowItWorks />
+      <div id="marketplace"><MarketplacePreview /></div>
+      <div id="agristore"><AgriStorePreview /></div>
+      <div id="nutrition"><NutritionPlanPreview /></div>
+      <div id="how-it-works"><HowItWorks /></div>
       <VideoTestimonials />
       <Testimonial />
       <FAQ />
-      <Pricing />
+      <div id="pricing"><Pricing /></div>
       <FinalCTA />
       <Footer />
     </main>

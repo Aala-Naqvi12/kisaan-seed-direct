@@ -108,4 +108,8 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  .font-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+  }
 }
