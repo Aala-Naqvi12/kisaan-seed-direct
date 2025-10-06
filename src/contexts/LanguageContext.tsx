@@ -12,7 +12,7 @@ interface LanguageContextType {
 const languageConfig = {
   ur: { name: 'اردو', dir: 'rtl', font: 'font-urdu' },
   en: { name: 'English', dir: 'ltr', font: '' },
-  pa: { name: 'ਪੰਜਾਬੀ', dir: 'ltr', font: 'font-punjabi' },
+  pa: { name: 'پنجابی', dir: 'rtl', font: 'font-punjabi' },
   sd: { name: 'سنڌي', dir: 'rtl', font: 'font-sindhi' },
   ps: { name: 'پښتو', dir: 'rtl', font: 'font-pashto' },
   bal: { name: 'بلوچی', dir: 'rtl', font: 'font-balochi' },
