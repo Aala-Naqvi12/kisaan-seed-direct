@@ -309,10 +309,10 @@ const MarketplacePreview = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container px-4">
-        <div className="text-center mb-12">
-          <Badge className="mb-4 text-base px-4 py-2">
+    <section className="py-12 md:py-20 bg-muted/30">
+      <div className="container px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+          <Badge className="mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2">
             {t({
               ur: "کسان مارکیٹ پلیس",
               en: "Farmer Marketplace",
@@ -323,7 +323,7 @@ const MarketplacePreview = () => {
               shina: "کسان بازار"
             })}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 text-foreground text-balance px-4">
             {t({
               ur: "براہ راست کسانوں سے خریدیں",
               en: "Buy Directly from Farmers",
@@ -334,7 +334,7 @@ const MarketplacePreview = () => {
               shina: "سوزی کساناں کھوٹے خریدو"
             })}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             {t({
               ur: "تازہ ترین فصلیں، منصفانہ قیمتیں، اور بھروسہ مند کسان - سب ایک جگہ",
               en: "Fresh crops, fair prices, and trusted farmers - all in one place",
@@ -347,31 +347,31 @@ const MarketplacePreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
           {products.map((product, index) => (
             <Card 
               key={product.id} 
-              className="group hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 cursor-pointer border-border/50 animate-fade-in"
+              className="group hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 cursor-pointer border-border/50 animate-fade-in hover-lift bg-card"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-4">
+              <CardContent className="p-3 md:p-4">
                 {/* Product Image */}
-                <div className="rounded-xl h-48 overflow-hidden mb-4 group-hover:scale-105 transition-transform">
+                <div className="rounded-xl h-40 md:h-48 overflow-hidden mb-3 md:mb-4 group-hover:scale-105 transition-transform duration-300">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
                   />
                 </div>
 
                 {/* Product Info */}
-                <div className="space-y-3">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="font-bold text-lg text-foreground mb-1">{product.name}</h3>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                        <MapPin className="h-3 w-3" />
-                        <span>{product.location}</span>
+                <div className="space-y-2 md:space-y-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-base md:text-lg text-foreground mb-1 truncate">{product.name}</h3>
+                      <div className="flex items-center gap-1 text-xs md:text-sm text-muted-foreground">
+                        <MapPin className="h-3 w-3 flex-shrink-0" />
+                        <span className="truncate">{product.location}</span>
                       </div>
                     </div>
                     {product.verified && (
@@ -382,16 +382,16 @@ const MarketplacePreview = () => {
                   </div>
 
                   {/* Farmer */}
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs md:text-sm text-muted-foreground truncate">
                     {t({
                       ur: "کسان:",
-                      en: "Farmer:",
-                      pa: "کسان:",
-                      sd: "هاري:",
-                      ps: "بزګر:",
-                      bal: "کسان:",
-                      shina: "کسان:"
-                    })} <span className="text-foreground font-medium">{product.farmer}</span>
+                       en: "Farmer:",
+                       pa: "کسان:",
+                       sd: "هاري:",
+                       ps: "بزګر:",
+                       bal: "کسان:",
+                       shina: "کسان:"
+                    })} <span className="text-foreground font-medium truncate">{product.farmer}</span>
                   </div>
 
                   {/* Harvest Date, Quantity & MOQ */}
@@ -422,12 +422,12 @@ const MarketplacePreview = () => {
                   </div>
 
                   {/* Rating */}
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 fill-accent text-accent" />
-                      <span className="font-semibold text-foreground">{product.rating}</span>
+                      <Star className="h-3 md:h-4 w-3 md:w-4 fill-accent text-accent" />
+                      <span className="font-semibold text-sm md:text-base text-foreground">{product.rating}</span>
                     </div>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-xs md:text-sm text-muted-foreground">
                       ({product.reviews} {t({
                         ur: "جائزے",
                         en: "reviews",
@@ -441,10 +441,10 @@ const MarketplacePreview = () => {
                   </div>
 
                   {/* Price & Add to Cart */}
-                  <div className="flex items-end justify-between pt-2 border-t border-border/50">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">₨{product.priceDisplay}</div>
-                      <div className="text-xs text-muted-foreground">{product.unit}</div>
+                  <div className="flex items-end justify-between pt-2 border-t border-border/50 gap-2">
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xl md:text-2xl font-bold text-primary truncate">₨{product.priceDisplay}</div>
+                      <div className="text-xs text-muted-foreground truncate">{product.unit}</div>
                     </div>
                     <Button 
                       size="sm" 
@@ -455,9 +455,9 @@ const MarketplacePreview = () => {
                         image: product.image,
                         seller: product.farmer
                       })}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all hover:scale-110 flex-shrink-0"
                     >
-                      <ShoppingCart className="h-4 w-4" />
+                      <ShoppingCart className="h-3 md:h-4 w-3 md:w-4" />
                     </Button>
                   </div>
                 </div>
@@ -466,8 +466,8 @@ const MarketplacePreview = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button size="lg" variant="outline" className="text-lg px-8">
+        <div className="text-center animate-fade-in">
+          <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 hover-lift">
             {t({
               ur: "تمام فصلیں دیکھیں",
               en: "View All Crops",
