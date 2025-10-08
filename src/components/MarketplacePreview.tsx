@@ -398,6 +398,17 @@ const MarketplacePreview = () => {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <Calendar className="h-3 w-3" />
+                      <span className="font-medium">
+                        {t({
+                          ur: "کٹائی کی تاریخ:",
+                          en: "Harvest Date:",
+                          pa: "کٹائی دی تاریخ:",
+                          sd: "فصل جي تاريخ:",
+                          ps: "د حاصل نیټه:",
+                          bal: "کٹائی ءِ تاریخ:",
+                          shina: "کٹائی جی تاریخ:"
+                        })}
+                      </span>
                       <span>{product.harvestDate}</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs text-green-600">
