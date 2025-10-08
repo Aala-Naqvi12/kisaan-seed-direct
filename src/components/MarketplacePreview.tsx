@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, TrendingUp, ShoppingCart, Calendar, Package } from "lucide-react";
+import { Star, MapPin, TrendingUp, ShoppingCart, Calendar, Package, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -76,6 +76,15 @@ const MarketplacePreview = () => {
         ps: "500 من شته",
         bal: "500 من موجود",
         shina: "500 من دستیاب"
+      }),
+      moq: t({
+        ur: "کم از کم 50 من",
+        en: "Min. 50 maunds",
+        pa: "گھٹ توں گھٹ 50 من",
+        sd: "گھٽ ۾ گھٽ 50 من",
+        ps: "لږ تر لږه 50 من",
+        bal: "کم از کم 50 من",
+        shina: "کم از کم 50 من"
       })
     },
     {
@@ -140,6 +149,15 @@ const MarketplacePreview = () => {
         ps: "200 کیلو شته",
         bal: "200 کلو موجود",
         shina: "200 کلو دستیاب"
+      }),
+      moq: t({
+        ur: "کم از کم 10 کلو",
+        en: "Min. 10 kg",
+        pa: "گھٹ توں گھٹ 10 کلو",
+        sd: "گھٽ ۾ گھٽ 10 ڪلو",
+        ps: "لږ تر لږه 10 کیلو",
+        bal: "کم از کم 10 کلو",
+        shina: "کم از کم 10 کلو"
       })
     },
     {
@@ -204,6 +222,15 @@ const MarketplacePreview = () => {
         ps: "800 من شته",
         bal: "800 من موجود",
         shina: "800 من دستیاب"
+      }),
+      moq: t({
+        ur: "کم از کم 100 من",
+        en: "Min. 100 maunds",
+        pa: "گھٹ توں گھٹ 100 من",
+        sd: "گھٽ ۾ گھٽ 100 من",
+        ps: "لږ تر لږه 100 من",
+        bal: "کم از کم 100 من",
+        shina: "کم از کم 100 من"
       })
     },
     {
@@ -268,6 +295,15 @@ const MarketplacePreview = () => {
         ps: "350 کیلو شته",
         bal: "350 کلو موجود",
         shina: "350 کلو دستیاب"
+      }),
+      moq: t({
+        ur: "کم از کم 20 کلو",
+        en: "Min. 20 kg",
+        pa: "گھٹ توں گھٹ 20 کلو",
+        sd: "گھٽ ۾ گھٽ 20 ڪلو",
+        ps: "لږ تر لږه 20 کیلو",
+        bal: "کم از کم 20 کلو",
+        shina: "کم از کم 20 کلو"
       })
     }
   ];
@@ -358,7 +394,7 @@ const MarketplacePreview = () => {
                     })} <span className="text-foreground font-medium">{product.farmer}</span>
                   </div>
 
-                  {/* Harvest Date & Quantity */}
+                  {/* Harvest Date, Quantity & MOQ */}
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <Calendar className="h-3 w-3" />
@@ -367,6 +403,10 @@ const MarketplacePreview = () => {
                     <div className="flex items-center gap-2 text-xs text-green-600">
                       <Package className="h-3 w-3" />
                       <span>{product.available}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-blue-600">
+                      <Scale className="h-3 w-3" />
+                      <span>{product.moq}</span>
                     </div>
                   </div>
 
