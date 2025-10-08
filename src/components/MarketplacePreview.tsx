@@ -60,13 +60,13 @@ const MarketplacePreview = () => {
       trend: "+12%",
       verified: true,
       harvestDate: t({
-        ur: "2 ہفتے پہلے",
-        en: "2 weeks ago",
-        pa: "2 ہفتے پہلاں",
-        sd: "2 هفتا اڳ",
-        ps: "2 اوونۍ دمخه",
-        bal: "2 ہفتہ پیش ءَ",
-        shina: "2 ہفتے اگے"
+        ur: "15 جنوری 2025",
+        en: "15 Jan 2025",
+        pa: "15 جنوری 2025",
+        sd: "15 جنوري 2025",
+        ps: "15 جنوري 2025",
+        bal: "15 جنوری 2025",
+        shina: "15 جنوری 2025"
       }),
       available: t({
         ur: "500 من دستیاب",
@@ -133,13 +133,13 @@ const MarketplacePreview = () => {
       trend: "+8%",
       verified: true,
       harvestDate: t({
-        ur: "آج صبح",
-        en: "This morning",
-        pa: "اج صبح",
-        sd: "اڄ صبح",
-        ps: "نن سهار",
-        bal: "امروچ صبح",
-        shina: "اج صبح"
+        ur: "05 فروری 2025",
+        en: "05 Feb 2025",
+        pa: "05 فروری 2025",
+        sd: "05 فيبروري 2025",
+        ps: "05 فبروري 2025",
+        bal: "05 فروری 2025",
+        shina: "05 فروری 2025"
       }),
       available: t({
         ur: "200 کلو دستیاب",
@@ -206,13 +206,13 @@ const MarketplacePreview = () => {
       trend: "+15%",
       verified: true,
       harvestDate: t({
-        ur: "1 ماہ پہلے",
-        en: "1 month ago",
-        pa: "1 مہینہ پہلاں",
-        sd: "1 مهينو اڳ",
-        ps: "1 میاشت دمخه",
-        bal: "1 ماہ پیش ءَ",
-        shina: "1 ماہ اگے"
+        ur: "20 دسمبر 2024",
+        en: "20 Dec 2024",
+        pa: "20 دسمبر 2024",
+        sd: "20 ڊسمبر 2024",
+        ps: "20 دسمبر 2024",
+        bal: "20 دسمبر 2024",
+        shina: "20 دسمبر 2024"
       }),
       available: t({
         ur: "800 من دستیاب",
@@ -279,13 +279,13 @@ const MarketplacePreview = () => {
       trend: "+5%",
       verified: true,
       harvestDate: t({
-        ur: "3 دن پہلے",
-        en: "3 days ago",
-        pa: "3 دن پہلاں",
-        sd: "3 ڏينهن اڳ",
-        ps: "3 ورځې دمخه",
-        bal: "3 روچ پیش ءَ",
-        shina: "3 دوس اگے"
+        ur: "28 جنوری 2025",
+        en: "28 Jan 2025",
+        pa: "28 جنوری 2025",
+        sd: "28 جنوري 2025",
+        ps: "28 جنوري 2025",
+        bal: "28 جنوری 2025",
+        shina: "28 جنوری 2025"
       }),
       available: t({
         ur: "350 کلو دستیاب",
