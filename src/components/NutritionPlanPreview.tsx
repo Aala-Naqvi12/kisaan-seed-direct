@@ -3,9 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Brain, CloudRain, TrendingUp, Calendar, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const NutritionPlanPreview = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const features = [
     {
@@ -370,7 +372,11 @@ const NutritionPlanPreview = () => {
                 </div>
               </div>
 
-              <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                size="lg" 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => navigate('/crop-planning')}
+              >
                 {t({
                   ur: "اپنا منصوبہ شروع کریں",
                   en: "Start Your Plan",

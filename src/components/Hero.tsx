@@ -77,6 +77,17 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-[0_0_40px_rgba(251,146,60,0.4)] hover:shadow-[0_0_60px_rgba(251,146,60,0.6)] transition-all duration-300 hover:scale-105 text-base md:text-lg px-6 md:px-10 py-5 md:py-7 font-bold backdrop-blur-sm border-2 border-accent/30 w-full sm:w-auto"
+              onClick={() => {
+                const element = document.getElementById('marketplace');
+                if (element) {
+                  const offset = 80;
+                  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                  window.scrollTo({
+                    top: elementPosition - offset,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
             >
               <ShoppingCart className="mr-2 h-5 md:h-6 w-5 md:w-6" />
               {t({ 
@@ -93,6 +104,17 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-white/80 text-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-primary transition-all duration-300 text-base md:text-lg px-6 md:px-10 py-5 md:py-7 font-bold shadow-elevated w-full sm:w-auto"
+              onClick={() => {
+                const element = document.getElementById('agristore');
+                if (element) {
+                  const offset = 80;
+                  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                  window.scrollTo({
+                    top: elementPosition - offset,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
             >
               {t({ 
                 ur: 'معیاری سامان خریدیں', 
