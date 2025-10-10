@@ -109,9 +109,9 @@ const Hero = () => {
 
           {/* Modern Stats with Glass Effect */}
           <div className="grid grid-cols-3 gap-3 md:gap-6 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/20">
-            <div className="backdrop-blur-md bg-white/5 p-2 md:p-4 rounded-lg border border-white/10 hover:bg-white/10 transition-all hover-lift">
-              <div className="flex items-center gap-1 md:gap-2 text-xl sm:text-2xl md:text-4xl font-bold text-primary-glow mb-1 drop-shadow-[0_0_20px_rgba(34,197,94,0.6)]">
-                <TrendingUp className="h-5 md:h-8 w-5 md:w-8" />
+            <div className="backdrop-blur-md bg-gradient-to-br from-secondary/20 to-accent/10 p-2 md:p-4 rounded-lg border border-secondary/30 hover:from-secondary/30 hover:to-accent/20 transition-all hover-lift">
+              <div className="flex items-center gap-1 md:gap-2 text-xl sm:text-2xl md:text-4xl font-bold text-secondary mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                <TrendingUp className="h-5 md:h-8 w-5 md:w-8 text-accent" />
                 10,000+
               </div>
               <div className="text-xs md:text-sm text-white/90 font-medium">
@@ -126,8 +126,8 @@ const Hero = () => {
                 })}
               </div>
             </div>
-            <div className="backdrop-blur-md bg-white/5 p-2 md:p-4 rounded-lg border border-white/10 hover:bg-white/10 transition-all hover-lift">
-              <div className="text-xl sm:text-2xl md:text-4xl font-bold text-primary-glow mb-1 drop-shadow-[0_0_20px_rgba(34,197,94,0.6)]">5,000+</div>
+            <div className="backdrop-blur-md bg-gradient-to-br from-primary/20 to-secondary/10 p-2 md:p-4 rounded-lg border border-primary/30 hover:from-primary/30 hover:to-secondary/20 transition-all hover-lift">
+              <div className="text-xl sm:text-2xl md:text-4xl font-bold text-primary-foreground mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">5,000+</div>
               <div className="text-xs md:text-sm text-white/90 font-medium">
                 {t({ 
                   ur: 'خریدار', 
@@ -140,8 +140,8 @@ const Hero = () => {
                 })}
               </div>
             </div>
-            <div className="backdrop-blur-md bg-white/5 p-2 md:p-4 rounded-lg border border-white/10 hover:bg-white/10 transition-all hover-lift">
-              <div className="text-xl sm:text-2xl md:text-4xl font-bold text-primary-glow mb-1 drop-shadow-[0_0_20px_rgba(34,197,94,0.6)]">30%</div>
+            <div className="backdrop-blur-md bg-gradient-to-br from-accent/20 to-secondary/10 p-2 md:p-4 rounded-lg border border-accent/30 hover:from-accent/30 hover:to-secondary/20 transition-all hover-lift">
+              <div className="text-xl sm:text-2xl md:text-4xl font-bold text-accent mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">30%</div>
               <div className="text-xs md:text-sm text-white/90 font-medium">
                 {t({ 
                   ur: 'پیداوار میں اضافہ', 

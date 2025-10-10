@@ -38,16 +38,18 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-card via-primary/5 to-card backdrop-blur-md border-b border-primary/20 shadow-soft">
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-all hover:scale-105"
           >
-            <Sprout className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">Kisaan Bazaar</span>
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-primary to-primary/70 shadow-soft">
+              <Sprout className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Kisaan Bazaar</span>
           </button>
 
           {/* Navigation */}

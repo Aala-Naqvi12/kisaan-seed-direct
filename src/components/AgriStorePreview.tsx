@@ -181,10 +181,10 @@ const AgriStorePreview = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-20 bg-gradient-to-b from-background via-primary/5 to-muted/30">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <Badge className="mb-4 text-base px-4 py-2 bg-secondary text-secondary-foreground">
+          <Badge className="mb-4 text-base px-4 py-2 bg-gradient-to-r from-secondary to-accent text-white shadow-soft">
             {t({
               ur: "زرعی اسٹور",
               en: "Agricultural Store",
@@ -318,18 +318,24 @@ const AgriStorePreview = () => {
 
         {/* Trust Badges */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <Shield className="h-12 w-12 text-primary mx-auto mb-3" />
+          <div className="text-center p-6 bg-gradient-to-br from-primary/10 to-secondary/5 rounded-xl border border-primary/30 hover:border-primary/50 transition-all hover-lift">
+            <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-soft">
+              <Shield className="h-8 w-8 text-primary-foreground" />
+            </div>
             <h4 className="font-bold text-lg mb-2">100% تصدیق شدہ</h4>
             <p className="text-sm text-muted-foreground">تمام فروخت کنندگان کی تصدیق</p>
           </div>
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <Package className="h-12 w-12 text-primary mx-auto mb-3" />
+          <div className="text-center p-6 bg-gradient-to-br from-secondary/10 to-accent/5 rounded-xl border border-secondary/30 hover:border-secondary/50 transition-all hover-lift">
+            <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center shadow-soft">
+              <Package className="h-8 w-8 text-secondary-foreground" />
+            </div>
             <h4 className="font-bold text-lg mb-2">تیز ترسیل</h4>
             <p className="text-sm text-muted-foreground">3-5 دنوں میں ڈیلیوری</p>
           </div>
-          <div className="text-center p-6 bg-card rounded-xl border border-border/50">
-            <Star className="h-12 w-12 text-primary mx-auto mb-3" />
+          <div className="text-center p-6 bg-gradient-to-br from-accent/10 to-primary/5 rounded-xl border border-accent/30 hover:border-accent/50 transition-all hover-lift">
+            <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center shadow-soft">
+              <Star className="h-8 w-8 text-accent-foreground" />
+            </div>
             <h4 className="font-bold text-lg mb-2">معیار کی ضمانت</h4>
             <p className="text-sm text-muted-foreground">واپسی کی سہولت</p>
           </div>

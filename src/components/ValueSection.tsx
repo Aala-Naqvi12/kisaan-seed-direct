@@ -14,7 +14,7 @@ const ValueSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-gradient-to-b from-background via-accent/5 to-muted/20">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
@@ -28,11 +28,13 @@ const ValueSection = () => {
             {values.map((value, index) => (
               <div 
                 key={index}
-                className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft animate-fade-in"
+                className="flex items-start gap-4 p-6 bg-gradient-to-br from-card to-primary/5 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft animate-fade-in group"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <p className="text-lg text-foreground">{value}</p>
+                <div className="p-1 rounded-full bg-gradient-to-br from-primary to-secondary flex-shrink-0 mt-1">
+                  <CheckCircle2 className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <p className="text-lg text-foreground group-hover:text-primary transition-colors">{value}</p>
               </div>
             ))}
           </div>

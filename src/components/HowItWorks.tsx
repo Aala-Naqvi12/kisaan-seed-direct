@@ -23,7 +23,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+    <section className="py-20 bg-gradient-to-b from-muted/30 via-secondary/5 to-background">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">
@@ -41,12 +41,12 @@ const HowItWorks = () => {
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold shadow-elevated">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-accent text-white flex items-center justify-center text-xl font-bold shadow-elevated">
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 border border-primary/20">
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/5 flex items-center justify-center mb-6 border border-primary/20 hover:border-secondary/40 transition-all hover-lift">
                   <step.icon className="h-12 w-12 text-primary" />
                 </div>
 
