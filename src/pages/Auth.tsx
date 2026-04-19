@@ -59,42 +59,42 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary/5 via-background to-secondary/5 px-4 py-8">
-      <div className="flex justify-between items-center max-w-md mx-auto w-full mb-8">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-soft">
-            <Sprout className="w-5 h-5 text-primary-foreground" />
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary/5 via-background to-secondary/5 px-4 py-5 sm:py-8">
+      <div className="flex justify-between items-center max-w-md mx-auto w-full mb-5 sm:mb-8">
+        <Link to="/" className="flex items-center gap-2 min-w-0">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-soft shrink-0">
+            <Sprout className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
           </div>
-          <span className="font-bold text-foreground">Kisaan Bazaar</span>
+          <span className="font-bold text-sm sm:text-base text-foreground truncate">Kisaan Bazaar</span>
         </Link>
         <button
           onClick={() => setLanguage(language === "en" ? "ur" : "en")}
-          className="text-xs px-3 py-1.5 rounded-full border border-border bg-card hover:bg-muted transition-colors"
+          className="text-xs px-3 py-1.5 rounded-full border border-border bg-card hover:bg-muted transition-colors shrink-0"
         >
           {language === "en" ? "اردو" : "English"}
         </button>
       </div>
 
-      <Card className="w-full max-w-md mx-auto p-6 sm:p-8 shadow-elevated">
-        <h1 className="text-2xl font-bold mb-1 text-foreground">
+      <Card className="w-full max-w-md mx-auto p-5 sm:p-8 shadow-elevated rounded-2xl">
+        <h1 className="text-xl sm:text-2xl font-bold mb-1 text-foreground">
           {mode === "login"
             ? t({ ur: "لاگ ان کریں", en: "Welcome back", pa: "ولاپس آؤ", sd: "ڀلي ڪري", ps: "بیرته ښه راغلاست", bal: "وش آتکگئے", shina: "سلام" })
             : t({ ur: "اکاؤنٹ بنائیں", en: "Create account", pa: "اکاؤنٹ بناؤ", sd: "اڪائونٽ ٺاهيو", ps: "حساب جوړ کړئ", bal: "اکاؤنٹ جوڑ", shina: "اکاؤنٹ بنا" })}
         </h1>
-        <p className="text-sm text-muted-foreground mb-6">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-5 sm:mb-6">
           {mode === "login" ? "Sign in to your Kisaan Bazaar account" : "Join thousands of farmers and buyers"}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" inputMode="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="h-12" />
+          <div className="space-y-1.5">
+            <Label htmlFor="email" className="text-sm">Email</Label>
+            <Input id="email" type="email" inputMode="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="h-11 sm:h-12 text-base" />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" autoComplete={mode === "login" ? "current-password" : "new-password"} value={password} onChange={(e) => setPassword(e.target.value)} required className="h-12" />
+          <div className="space-y-1.5">
+            <Label htmlFor="password" className="text-sm">Password</Label>
+            <Input id="password" type="password" autoComplete={mode === "login" ? "current-password" : "new-password"} value={password} onChange={(e) => setPassword(e.target.value)} required className="h-11 sm:h-12 text-base" />
           </div>
-          <Button type="submit" disabled={submitting} className="w-full h-12 text-base bg-gradient-to-r from-primary to-primary-glow shadow-soft">
+          <Button type="submit" disabled={submitting} className="w-full h-11 sm:h-12 text-base bg-gradient-to-r from-primary to-primary-glow shadow-soft gap-2">
             {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
             {mode === "login" ? "Sign in" : "Create account"}
           </Button>
@@ -103,7 +103,7 @@ const Auth = () => {
         <button
           type="button"
           onClick={() => setMode(mode === "login" ? "signup" : "login")}
-          className="w-full mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="w-full mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
         >
           {mode === "login" ? "New here? Create an account" : "Already have an account? Sign in"}
         </button>
