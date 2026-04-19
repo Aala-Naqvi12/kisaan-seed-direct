@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Sprout, Languages, ShoppingCart, Trash2, Plus, Minus } from "lucide-react";
+import { Sprout, Languages, ShoppingCart, Trash2, Plus, Minus, LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCart } from "@/contexts/CartContext";
+import { useAuth } from "@/contexts/AuthContext";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +15,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 const Header = () => {
   const { language, setLanguage, t, getLanguageName } = useLanguage();
   const { items, totalItems, totalPrice, removeFromCart, updateQuantity } = useCart();
+  const { user, role } = useAuth();
   
   const languages = ['ur', 'en', 'pa', 'sd', 'ps', 'bal', 'shina'] as const;
 
@@ -90,6 +93,14 @@ const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {/* Sign in / Open App */}
+          <Button asChild size="sm" className="bg-gradient-to-r from-primary to-primary-glow shadow-soft gap-1.5">
+            <Link to={user ? (role ? "/app" : "/select-role") : "/auth"}>
+              <LogIn className="h-4 w-4" />
+              <span className="hidden sm:inline">{user ? "Open App" : "Sign in"}</span>
+            </Link>
+          </Button>
 
           {/* Shopping Cart */}
           <Sheet>
